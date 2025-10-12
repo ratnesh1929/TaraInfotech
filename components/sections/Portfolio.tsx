@@ -35,10 +35,10 @@ export function Portfolio() {
       githubUrl: '#'
     },
     {
-      title: 'Real Estate Portal',
-      description: 'Property listing platform with advanced search and virtual tour features.',
+      title: 'E-Commerce Website for Clothes',
+      description: 'A modern and fully responsive e-commerce platform for clothing that allows users to browse, filter, and purchase apparel effortlessly. It includes features like product search, size and color variations, a secure checkout process with multiple payment options, order tracking, and an intuitive admin dashboard for managing products, orders, and inventory.',
       image: '/api/placeholder/400/300',
-      technologies: ['Angular', 'Express.js', 'MongoDB', 'Cloudinary'],
+      technologies: ['React.js', 'Express.js', 'MongoDB', 'Cloudinary'],
       liveUrl: '#',
       githubUrl: '#'
     },
@@ -74,7 +74,7 @@ export function Portfolio() {
                     <p className="text-sm text-gray-600">Project Preview</p>
                   </div>
                 </div>
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                {/* <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex space-x-4">
                     <a
                       href={project.liveUrl}
@@ -89,7 +89,7 @@ export function Portfolio() {
                       <Github size={20} />
                     </a>
                   </div>
-                </div>
+                </div> */}
               </div>
               
               <div className="p-6">
