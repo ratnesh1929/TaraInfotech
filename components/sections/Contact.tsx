@@ -20,30 +20,32 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
     console.log('Form submitted:', formData)
   }
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-gray-50 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-gray-100/60" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Get In Touch
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Get in Touch
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to start your next project? Let's discuss how we can help bring your ideas to life.
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Have an idea or project in mind? We’re here to turn your vision into reality.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
           {/* Contact Form */}
-          <div className="bg-white rounded-xl p-8 shadow-lg">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+          <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100 hover:shadow-2xl transition-shadow duration-300 h-full">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-8 border-l-4 border-primary-500 pl-3">
               Send us a Message
             </h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6 h-full">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -56,7 +58,7 @@ export function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:outline-none transition-all placeholder-white"
                     placeholder="Your full name"
                   />
                 </div>
@@ -71,12 +73,12 @@ export function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:outline-none transition-all placeholder-white"
                     placeholder="your@email.com"
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
                   Subject
@@ -88,12 +90,12 @@ export function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  placeholder="What's this about?"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:outline-none transition-all placeholder-white"
+                  placeholder="What’s this about?"
                 />
               </div>
-              
-              <div>
+
+              <div className="flex-1">
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message
                 </label>
@@ -104,14 +106,14 @@ export function Contact() {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  placeholder="Tell us about your project..."
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:outline-none transition-all placeholder-white"
+                  placeholder="Tell us about your project... "
                 />
               </div>
-              
+
               <button
                 type="submit"
-                className="w-full bg-primary-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary-700 transition-colors flex items-center justify-center"
+                className="w-full bg-primary-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary-700 transition-all duration-200 flex items-center justify-center"
               >
                 <Send size={20} className="mr-2" />
                 Send Message
@@ -119,69 +121,61 @@ export function Contact() {
             </form>
           </div>
 
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                Contact Information
-              </h3>
-              <p className="text-gray-600 mb-8">
-                We're here to help! Reach out to us through any of the following channels.
-              </p>
-            </div>
-
+          {/* Contact Info */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100 hover:shadow-2xl transition-shadow h-full flex flex-col justify-between">
             <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
-                    <Mail size={24} className="text-primary-600" />
-                  </div>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900">Email</h4>
-                  <p className="text-gray-600">tarasoftwareworks@gmail.com</p>
-                  <p className="text-gray-600">support@tarainfotech.com</p>
-                </div>
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4 border-l-4 border-primary-500 pl-3">
+                  Contact Information
+                </h3>
+                <p className="text-gray-600 max-w-md">
+                  We’re always happy to connect. Reach out using any of the methods below — our team will respond promptly.
+                </p>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
-                    <Phone size={24} className="text-primary-600" />
-                  </div>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900">Phone</h4>
-                  <p className="text-gray-600">+91 8866661624</p>
-                  <p className="text-gray-600">+1 (555) 987-6543</p>
-                </div>
-              </div>
+              <div className="space-y-6">
+               {[
+{
+  title: 'Email',
+ icon: Mail,
+details: ['tarasoftwareworks@gmail.com', 'support@tarainfotech.com']
+}, {
+title: 'Phone',
+icon: Phone,
+ details: ['+91 8866661624', '+1 (555) 987-6543']
+},
+{
+ title: 'Address',
+ icon: MapPin,
+ details: ['123 Tech Street', 'Innovation District', 'City, State 12345']
+}
+].map((item, index) => (
+ <div key={index} className="flex items-start space-x-4">
+ <div className="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center">
+ <item.icon size={24} className="text-primary-600" />
+ </div>
+<div>
+ <h4 className="text-lg font-semibold text-gray-900">{item.title}</h4>
+ {item.details.map((d, i) => (
+ <p key={i} className="text-gray-600">{d}</p>
+ ))}
+ </div>
+ </div>
+))}
 
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
-                    <MapPin size={24} className="text-primary-600" />
-                  </div>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900">Address</h4>
-                  <p className="text-gray-600">
-                    123 Tech Street<br />
-                    Innovation District<br />
-                    City, State 12345
-                  </p>
-                </div>
               </div>
             </div>
 
-            <div className="bg-primary-50 rounded-xl p-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                Business Hours
+            {/* 5 Working Days Statement, and Notes */}
+            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-md hover:shadow-lg transition-shadow mt-6">
+              <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                Notes
               </h4>
               <div className="space-y-1 text-gray-600">
-                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p>Saturday: 10:00 AM - 4:00 PM</p>
-                <p>Sunday: Closed</p>
+                <p>We are available 5 working days a week (Monday to Friday).</p>
+                <p>For prompt assistance, please expect a reply within 24-48 hours during working days.</p>
+                <p>All information submitted is protected and confidential.</p>
+                <p>For career opportunities, please email your resume to <span className="text-primary-600">hr@tarainfotech.com</span>.</p>
               </div>
             </div>
           </div>

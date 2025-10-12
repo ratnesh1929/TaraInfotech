@@ -58,20 +58,16 @@ export function About() {
               Our Mission
             </h3>
             <p className="text-gray-600 mb-6">
-              To empower businesses with innovative technology solutions that drive growth, 
-              enhance efficiency, and create meaningful connections with their customers.
+             Our mission is to empower businesses with innovative digital solutions that fuel growth and efficiency..
             </p>
             <p className="text-gray-600">
-              We believe in the power of technology to transform ideas into reality, 
-              and we're committed to delivering excellence in every project we undertake.
-            </p>
+We transform ideas into powerful realities through technology, creativity, and excellence.
+Every project we deliver drives connection, impact, and lasting success.            </p>
           </div>
           <div className="relative">
             <div className="w-full h-80 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl flex items-center justify-center">
               <div className="text-center">
-                <div className="text-6xl mb-4">🚀</div>
-                <h4 className="text-2xl font-bold text-gray-800">Innovation</h4>
-                <p className="text-gray-600">Driving the Future</p>
+                <img src="/mission.webp" alt="Our Mission" className="w-full h-full object-cover rounded-2xl" />
               </div>
             </div>
           </div>

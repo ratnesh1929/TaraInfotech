@@ -48,7 +48,7 @@ export function Services() {
             Our Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive technology solutions tailored to meet your business needs and drive growth.
+            Delivering end-to-end technology solutions designed to empower your business, enhance efficiency, and accelerate growth..
           </p>
         </div>
 

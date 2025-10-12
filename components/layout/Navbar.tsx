@@ -22,6 +22,11 @@ export function Navbar() {
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0">
               <span className="text-2xl font-bold gradient-text">Tara InfoTech</span>
+              {/* <img 
+  src="/logo.jpg" 
+  alt="Tara InfoTech" 
+  className="h-12 w-36 object-contain"
+/> */}
             </Link>
           </div>
 
