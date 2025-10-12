@@ -1,19 +1,24 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
+import { useState } from "react";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+
+  const pathname = usePathname();
+
+  const isActive = (href: string) => pathname === href;
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Contact', href: '/contact' },
-  ]
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "Contact", href: "/contact" },
+  ];
 
   return (
     <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
@@ -21,7 +26,9 @@ export function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0">
-              <span className="text-2xl font-bold gradient-text">Tara InfoTech</span>
+              <span className="text-2xl font-bold gradient-text">
+                Tara InfoTech
+              </span>
               {/* <img 
   src="/logo.jpg" 
   alt="Tara InfoTech" 
@@ -36,7 +43,9 @@ export function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className={`text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  isActive(item.href) ? "text-primary-600" : ""
+                }`}
               >
                 {item.name}
               </Link>
@@ -86,5 +95,5 @@ export function Navbar() {
         </div>
       )}
     </nav>
-  )
+  );
 }

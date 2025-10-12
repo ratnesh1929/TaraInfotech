@@ -175,7 +175,15 @@ icon: Phone,
                 <p>We are available 5 working days a week (Monday to Friday).</p>
                 <p>For prompt assistance, please expect a reply within 24-48 hours during working days.</p>
                 <p>All information submitted is protected and confidential.</p>
-                <p>For career opportunities, please email your resume to <span className="text-primary-600">hr@tarainfotech.com</span>.</p>
+                <p>
+                  For career opportunities, please email your resume to{' '}
+                  <a
+                    href="mailto:hr@tarainfotech.com"
+                    className="text-primary-600 underline hover:text-primary-700"
+                  >
+                    hr@tarainfotech.com
+                  </a>.
+                </p>
               </div>
             </div>
           </div>

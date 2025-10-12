@@ -1,4 +1,6 @@
 import { Code, Smartphone, Palette, Zap } from 'lucide-react'
+import Image from 'next/image'
+import target_img from '../../public/images/20945375.jpg'
 
 export function About() {
   const features = [
@@ -67,7 +69,15 @@ Every project we deliver drives connection, impact, and lasting success.        
           <div className="relative">
             <div className="w-full h-80 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl flex items-center justify-center">
               <div className="text-center">
-                <img src="/mission.webp" alt="Our Mission" className="w-full h-full object-cover rounded-2xl" />
+                <Image
+                  src={target_img}
+                  alt="Our Mission"
+                  className="w-full h-full object-cover rounded-2xl"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+                {/* <img src={target_img} alt="Our Mission" className="w-full h-full object-cover rounded-2xl" /> */}
               </div>
             </div>
           </div>
