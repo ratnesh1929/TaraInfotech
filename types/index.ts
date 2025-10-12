@@ -195,3 +195,4 @@ export interface CaseStudy {
   publishedAt: string
   slug: string
 }
+

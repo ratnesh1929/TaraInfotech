@@ -58,7 +58,7 @@ export function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:outline-none transition-all placeholder-white"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:outline-none transition-all placeholder-gray-400"
                     placeholder="Your full name"
                   />
                 </div>
@@ -73,7 +73,7 @@ export function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:outline-none transition-all placeholder-white"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:outline-none transition-all placeholder-gray-400"
                     placeholder="your@email.com"
                   />
                 </div>

@@ -21,7 +21,7 @@ export function Hero() {
       setCurrentText((prev) => (prev + 1) % heroTexts.length)
     }, 3000)
     return () => clearInterval(interval)
-  }, [])
+  }, [heroTexts.length])
 
   // lock background scroll and handle Esc to close modal
   useEffect(() => {
