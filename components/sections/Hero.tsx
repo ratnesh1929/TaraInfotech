@@ -283,9 +283,14 @@ export function Hero() {
             </div>
 
             <div className="flex items-center space-x-8 pt-8">
-              <div className="text-center">
+              {/* <div className="text-center">
                 <div className="text-3xl font-bold text-primary-600"><CountUp to={10} />+</div>
                 <div className="text-sm text-gray-600">Projects Completed</div>
+              </div> */}
+              <div className="hidden sm:block w-px h-16 bg-gray-300"></div>
+              <div className="text-center group cursor-pointer">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold gradient-text group-hover:scale-110 transition-transform inline-block"><CountUp to={10} />+</div>
+                <div className="text-sm sm:text-base md:text-lg text-gray-700 font-semibold mt-2">Projects Completed</div>
               </div>
               <div className="hidden sm:block w-px h-16 bg-gray-300"></div>
               <div className="text-center group cursor-pointer">
