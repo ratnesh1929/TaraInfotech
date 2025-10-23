@@ -230,13 +230,17 @@ export function Hero() {
   }, [isDemoOpen]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-secondary-50 pt-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 overflow-hidden pt-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          
           {/* Left Content */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+          <div className="space-y-8 animate-slide-in-left">
+            {/* <div className="inline-block px-4 py-2 bg-gradient-primary/10 rounded-full mb-4">
+              <span className="text-primary-600 font-semibold text-sm">Welcome to Innovation</span>
+            </div> */}
+            <div className="space-y-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
                 We Build Amazing
                 {/* <span className="block gradient-text"> */}
                 {/* {heroTexts[currentText]} */}
@@ -259,7 +263,7 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors group"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-primary text-white rounded-xl font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
               >
                 Get Started
                 <ArrowRight
@@ -271,9 +275,9 @@ export function Hero() {
               <button
                 type="button"
                 onClick={() => setIsDemoOpen(true)}
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary-600 text-primary-600 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white border-2 border-gray-200 text-gray-800 rounded-xl font-bold hover:border-primary-600 hover:text-primary-600 hover:shadow-xl transition-all duration-300 group"
               >
-                <Play size={20} className="mr-2" />
+                <Play size={20} className="mr-2 group-hover:scale-110 transition-transform" />
                 Watch Demo
               </button>
             </div>
@@ -283,41 +287,47 @@ export function Hero() {
                 <div className="text-3xl font-bold text-primary-600"><CountUp to={10} />+</div>
                 <div className="text-sm text-gray-600">Projects Completed</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary-600"><CountUp to={10} />+</div>
-                <div className="text-sm text-gray-600">Happy Clients</div>
+              <div className="hidden sm:block w-px h-16 bg-gray-300"></div>
+              <div className="text-center group cursor-pointer">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold gradient-text group-hover:scale-110 transition-transform inline-block">10+</div>
+                <div className="text-sm sm:text-base md:text-lg text-gray-700 font-semibold mt-2">Happy Clients</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary-600"><CountUp to={1} /></div>
-                <div className="text-sm text-gray-600">Years Experience</div>
+              <div className="hidden sm:block w-px h-16 bg-gray-300"></div>
+              <div className="text-center group cursor-pointer">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold gradient-text group-hover:scale-110 transition-transform inline-block">1+</div>
+                <div className="text-sm sm:text-base md:text-lg text-gray-700 font-semibold mt-2">Years Experience</div>
               </div>
             </div>
           </div>
 
           {/* Right Content - Hero Image */}
-          <div className="relative">
-            <div className="relative z-10">
-              <div className="w-full h-96 rounded-2xl shadow-2xl overflow-hidden">
+          <div className="relative animate-slide-in-right">
+            <div className="relative z-10 group">
+              <div className="w-full h-96 md:h-[500px] rounded-3xl shadow-2xl overflow-hidden transform group-hover:scale-105 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-primary opacity-20 mix-blend-overlay"></div>
                 <img
                   src="/hero.jpg"
                   alt="Digital Vision"
-                  className="w-full h-full object-cover rounded-2xl"
+                  className="w-full h-full object-cover"
                 />
               </div>
+              {/* Decorative border */}
+              <div className="absolute -inset-1 bg-gradient-primary rounded-3xl opacity-20 blur-xl group-hover:opacity-40 transition-opacity"></div>
             </div>
 
             {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400 rounded-full opacity-20 animate-pulse"></div>
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-green-400 rounded-full opacity-20 animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 -left-8 w-16 h-16 bg-purple-400 rounded-full opacity-20 animate-pulse delay-500"></div>
+            <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full opacity-30 animate-float blur-2xl"></div>
+            <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-gradient-to-br from-green-400 to-cyan-500 rounded-full opacity-30 animate-float blur-2xl" style={{animationDelay: '1s'}}></div>
+            <div className="absolute top-1/2 -left-10 w-24 h-24 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full opacity-30 animate-float blur-2xl" style={{animationDelay: '0.5s'}}></div>
           </div>
         </div>
       </div>
 
       {/* Background Pattern */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-200 rounded-full opacity-20"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-secondary-200 rounded-full opacity-20"></div>
+        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-blue-300 to-purple-400 rounded-full opacity-30 blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-purple-300 to-pink-400 rounded-full opacity-30 blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-gradient-to-br from-yellow-200 to-orange-300 rounded-full opacity-20 blur-3xl animate-pulse" style={{animationDelay: '0.5s'}}></div>
       </div>
 
       {/* Demo Modal */}
