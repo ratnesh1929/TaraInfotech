@@ -336,35 +336,37 @@ export function Hero() {
       </div>
 
       {/* Demo Modal */}
-      {isDemoOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 p-4"
-          onClick={() => setIsDemoOpen(false)}
-        >
-          <div
-            className="relative w-full max-w-4xl bg-transparent"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              type="button"
-              onClick={() => setIsDemoOpen(false)}
-              aria-label="Close demo"
-              className="absolute -top-6 right-0 text-white bg-black bg-opacity-50 rounded-full p-2 hover:opacity-90"
-            >
-              ✕
-            </button>
+      {/* Demo Modal */}
+{isDemoOpen && (
+  <div
+    className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 p-4"
+    onClick={() => setIsDemoOpen(false)}
+  >
+    <div
+      className="relative w-full max-w-4xl bg-transparent"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button
+        type="button"
+        onClick={() => setIsDemoOpen(false)}
+        aria-label="Close demo"
+        className="absolute -top-6 right-0 text-white bg-black bg-opacity-50 rounded-full p-2 hover:opacity-90"
+      >
+        ✕
+      </button>
 
-            <div className="w-full h-0 pb-[56.25%] relative">
-              <video
-                ref={videoRef}
-                src="/Video.mp4"
-                controls
-                className="absolute inset-0 w-full h-full rounded-lg bg-black"
-              />
-            </div>
-          </div>
-        </div>
-      )}
+      <div className="w-full h-0 pb-[56.25%] relative">
+        <video
+          ref={videoRef}
+          src={process.env.NEXT_PUBLIC_CLOUDINARY_VIDEO_URL}
+          controls
+          className="absolute inset-0 w-full h-full rounded-lg bg-black"
+        />
+      </div>
+    </div>
+  </div>
+)}
+
     </section>
   );
 }
