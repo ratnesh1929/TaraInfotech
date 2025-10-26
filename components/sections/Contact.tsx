@@ -92,7 +92,7 @@ export function Contact() {
             Get in <span className="gradient-text">Touch</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Have an idea or project in mind? We're here to turn your vision into
+            Have an idea or project in mind? We&apos;re here to turn your vision into
             reality.
           </p>
         </div>
@@ -246,7 +246,7 @@ export function Contact() {
                   Contact Information
                 </h3>
                 <p className="text-gray-600 max-w-md leading-relaxed">
-                  We're always happy to connect. Reach out using any of the
+                  We&apos;re always happy to connect. Reach out using any of the
                   methods below — our team will respond promptly.
                 </p>
               </div>
