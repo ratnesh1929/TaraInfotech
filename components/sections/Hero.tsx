@@ -358,8 +358,7 @@ export function Hero() {
       <div className="w-full h-0 pb-[56.25%] relative">
         <video
           ref={videoRef}
-          src={process.env.NEXT_PUBLIC_CLOUDINARY_VIDEO_URL}
-          controls
+          src="https://res.cloudinary.com/do843mo3n/video/upload/v1761369327/video_p84rie.mp4"
           className="absolute inset-0 w-full h-full rounded-lg bg-black"
         />
       </div>
