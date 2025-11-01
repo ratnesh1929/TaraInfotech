@@ -139,7 +139,7 @@ export default function CookiePolicy() {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Your Cookie Consent</h2>
             <p className="text-gray-700 leading-relaxed">
-              When you first visit our website, you'll see a cookie banner asking for your consent. You can choose to 
+              When you first visit our website, you&apos;ll see a cookie banner asking for your consent. You can choose to 
               accept all cookies, reject non-essential cookies, or customize your preferences. You can change your 
               preferences at any time through our cookie settings.
             </p>

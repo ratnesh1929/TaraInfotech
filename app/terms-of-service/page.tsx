@@ -26,7 +26,7 @@ export default function TermsOfService() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Agreement to Terms</h2>
             <p className="text-gray-700 leading-relaxed">
               Welcome to Tara Infotech. By accessing or using our website and services, you agree to be bound by these Terms 
-              of Service ("Terms"). Please read these Terms carefully before using our services. If you do not agree to these 
+              of Service (&quot;Terms&quot;). Please read these Terms carefully before using our services. If you do not agree to these 
               Terms, please do not use our website or services.
             </p>
           </section>
@@ -36,16 +36,16 @@ export default function TermsOfService() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Definitions</h2>
             <ul className="space-y-3 text-gray-700">
               <li>
-                <strong>"Company," "we," "us," or "our"</strong> refers to Tara Infotech
+                <strong>&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;</strong> refers to Tara Infotech
               </li>
               <li>
-                <strong>"Services"</strong> refers to all services, products, and features provided by Tara Infotech
+                <strong>&quot;Services&quot;</strong> refers to all services, products, and features provided by Tara Infotech
               </li>
               <li>
-                <strong>"User," "you," or "your"</strong> refers to any individual or entity using our services
+                <strong>&quot;User,&quot; &quot;you,&quot; or &quot;your&quot;</strong> refers to any individual or entity using our services
               </li>
               <li>
-                <strong>"Website"</strong> refers to our website and all associated platforms
+                <strong>&quot;Website&quot;</strong> refers to our website and all associated platforms
               </li>
             </ul>
           </section>
@@ -192,7 +192,7 @@ export default function TermsOfService() {
               <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">Disclaimer</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  OUR SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR 
+                  OUR SERVICES ARE PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR 
                   IMPLIED. WE DO NOT WARRANT THAT OUR SERVICES WILL BE UNINTERRUPTED, ERROR-FREE, OR SECURE.
                 </p>
               </div>
