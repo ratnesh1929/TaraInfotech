@@ -82,11 +82,11 @@ export function Services() {
   ]
 
   return (
-    <section className="py-24 bg-gradient-to-b from-gray-50 via-white to-gray-50 relative overflow-hidden">
+    <section className="py-24 bg-white relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-40 right-20 w-96 h-96 bg-purple-300 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-40 left-20 w-96 h-96 bg-blue-300 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-40 right-20 w-96 h-96 bg-blue-200 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-40 left-20 w-96 h-96 bg-slate-200 rounded-full blur-3xl"></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -106,21 +106,20 @@ export function Services() {
           {services.slice(0, showAll ? services.length : 6).map((service, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 group border border-gray-100 hover:border-primary-200 relative overflow-hidden"
+              className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-200 group border border-gray-200 hover:border-primary-300 relative overflow-hidden"
               style={{animationDelay: `${index * 0.1}s`}}
             >
-              {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity"></div>
+              {/* Subtle overlay on hover */}
+              <div className="absolute inset-0 bg-primary-50 opacity-0 group-hover:opacity-30 transition-opacity"></div>
               
               <div className="relative z-10">
                 <div className="relative mb-6">
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-100 to-purple-100 rounded-2xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                    <service.icon size={36} className="text-primary-600 group-hover:text-primary-700 transition-colors" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-50 rounded-xl transition-all duration-200">
+                    <service.icon size={28} className="text-primary-600 transition-colors" />
                   </div>
-                  <div className="absolute inset-0 bg-primary-400 blur-2xl opacity-0 group-hover:opacity-20 transition-opacity"></div>
                 </div>
                 
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 transition-colors">
                   {service.title}
                 </h3>
                 
@@ -128,13 +127,11 @@ export function Services() {
                   {service.description}
                 </p>
                 
-                <ul className="space-y-3">
+                <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                      <div className="w-5 h-5 bg-primary-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                        <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
-                      </div>
-                      <span className="font-medium">{feature}</span>
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <div className="w-1.5 h-1.5 bg-primary-500 rounded-full mr-3 flex-shrink-0"></div>
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -146,7 +143,7 @@ export function Services() {
         <div className="text-center mt-16">
           <button 
             onClick={() => setShowAll(!showAll)}
-            className="bg-gradient-primary text-white px-10 py-4 rounded-xl font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center space-x-2"
+            className="bg-primary-600 text-white px-10 py-3.5 rounded-lg font-semibold hover:bg-primary-700 hover:shadow-lg transition-all duration-200 inline-flex items-center space-x-2"
           >
             <span>{showAll ? 'Show Less Services' : 'View All Services'}</span>
             <svg 

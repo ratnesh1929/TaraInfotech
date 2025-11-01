@@ -111,7 +111,7 @@ export async function POST(request: NextRequest) {
                 <div class="value">${message.replace(/\n/g, '<br>')}</div>
               </div>
               <div class="footer">
-                <p>This email was sent from the Tara InfoTech contact form</p>
+                <p>This email was sent from the MundraTech contact form</p>
                 <p>Received on ${new Date().toLocaleString()}</p>
               </div>
             </div>
@@ -125,7 +125,7 @@ export async function POST(request: NextRequest) {
     const mailOptionsToUser = {
       from: process.env.EMAIL_USER,
       to: email,
-      subject: 'Thank you for contacting Tara InfoTech',
+      subject: 'Thank you for contacting MundraTech',
       html: `
         <!DOCTYPE html>
         <html>
@@ -179,7 +179,7 @@ export async function POST(request: NextRequest) {
             </div>
             <div class="content">
               <p>Dear ${name},</p>
-              <p>Thank you for reaching out to <strong>Tara InfoTech</strong>. We have received your message and our team will get back to you within 24 hours during working days (Monday to Friday).</p>
+              <p>Thank you for reaching out to <strong>MundraTech</strong>. We have received your message and our team will get back to you within 24 hours during working days (Monday to Friday).</p>
               
               <h3>Your Message Details:</h3>
               <p><strong>Subject:</strong> ${subject}</p>
@@ -197,7 +197,7 @@ export async function POST(request: NextRequest) {
               </div>
               
               <div class="footer">
-                <p>Best regards,<br><strong>Tara InfoTech Team</strong></p>
+                <p>Best regards,<br><strong>MundraTech Team</strong></p>
                 <p>This is an automated response. Please do not reply to this email.</p>
               </div>
             </div>

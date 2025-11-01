@@ -7,9 +7,16 @@ import { Footer } from '@/components/layout/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Tara InfoTech - Your Technology Partner',
+  title: 'MundraTech - Your Technology Partner',
   description: 'Leading technology solutions provider specializing in web development, mobile apps, and digital transformation.',
   keywords: 'technology, web development, mobile apps, digital solutions, software development',
+  icons: {
+    icon: '/mundralogo.jpg',
+    apple: '/mundralogo.jpg',
+  },
+  openGraph: {
+    images: ['/mundralogo.jpg'],
+  },
 }
 
 export default function RootLayout({

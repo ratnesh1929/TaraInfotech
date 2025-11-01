@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Menu, X, Sparkles } from 'lucide-react'
 
@@ -30,14 +31,15 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 group">
-              <div className="flex items-center space-x-2">
-                <div className="relative">
-                  {/* <Sparkles className="w-8 h-8 text-primary-600 group-hover:text-primary-700 transition-colors" /> */}
-                  <div className="absolute inset-0 bg-primary-400 blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                </div>
-                <span className="text-2xl font-bold gradient-text group-hover:scale-105 transition-transform inline-block">
-                  Tara InfoTech
-                </span>
+              <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+                <Image
+                  src="/mundralogo.jpg"
+                  alt="MundraTech Logo"
+                  width={80}
+                  height={80}
+                  className="object-contain group-hover:scale-110 transition-all duration-300 drop-shadow-lg"
+                  priority
+                />
               </div>
             </Link>
           </div>
@@ -58,17 +60,16 @@ export function Navbar() {
                 >
                   {item.name}
                   {isActive && (
-                    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg-gradient-primary rounded-full"></span>
+                    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg-primary-500 rounded-full"></span>
                   )}
                 </Link>
               )
             })}
             <Link
               href="/contact"
-              className="ml-4 bg-gradient-primary text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:shadow-lg hover:scale-105 transition-all duration-200 flex items-center space-x-2"
+              className="ml-4 bg-primary-600 text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-primary-700 hover:shadow-md transition-all duration-200 flex items-center space-x-2"
             >
               <span>Get Started</span>
-              <Sparkles className="w-4 h-4" />
             </Link>
           </div>
 
@@ -111,7 +112,7 @@ export function Navbar() {
           })}
           <Link
             href="/contact"
-            className="block bg-gradient-primary text-white px-4 py-3 rounded-lg text-base font-semibold hover:shadow-lg transition-all text-center"
+            className="block bg-primary-600 text-white px-4 py-3 rounded-lg text-base font-semibold hover:bg-primary-700 transition-all duration-200 text-center"
             onClick={() => setIsOpen(false)}
           >
             Get Started

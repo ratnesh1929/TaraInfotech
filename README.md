@@ -1,4 +1,4 @@
-# Tara InfoTech Website
+# MundraTech Website
 
 A modern, responsive company website built with Next.js 14, TypeScript, and Tailwind CSS.
 
@@ -178,5 +178,5 @@ For support, email tarasoftwareworks@gmail.com or create an issue in the reposit
 
 ---
 
-Built with ❤️ by Tara InfoTech
+Built with ❤️ by MundraTech
 

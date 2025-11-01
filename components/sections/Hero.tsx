@@ -29,13 +29,12 @@ interface CountUpProps {
 export default function GradientText({
   children,
   className = "",
-  // colors = ["#eff6ff", "#3b82f6", "#1e3a8a", "#1e3a8a", "#94a3b8", "#0f172a"],
-  colors = ['#3b82f6', // primary-500
-  '#3b82f6', // primary-500
-  '#60a5fa', // primary-400
-  '#93c5fd', // primary-300
-  '#94a3b8', // secondary-400
-  '#cbd5e1'  // secondary-300
+  colors = ['#0ea5e9', // primary-500 blue
+  '#38bdf8', // primary-400 blue
+  '#0284c7', // primary-600 blue
+  '#64748b', // secondary-500 slate
+  '#475569', // secondary-600 slate
+  '#0369a1'  // primary-700 blue
   ],
   animationSpeed = 8,
   showBorder = false,
@@ -230,7 +229,7 @@ export function Hero() {
   }, [isDemoOpen]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 overflow-hidden pt-16">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-cyan-50/50 via-blue-50/30 to-white overflow-hidden pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
@@ -253,7 +252,7 @@ export function Hero() {
                 </GradientText>
                 {/* </span> */}
               </h1>
-              <p className="text-xl text-gray-600 max-w-2xl">
+              <p className="text-xl text-gray-800 font-medium max-w-2xl leading-relaxed">
                 Transform your business with cutting-edge technology solutions.
                 We deliver innovative web and mobile applications that drive
                 growth and success.
@@ -263,7 +262,7 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-primary text-white rounded-xl font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
+                className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 hover:shadow-lg transition-all duration-200 group"
               >
                 Get Started
                 <ArrowRight
@@ -275,9 +274,9 @@ export function Hero() {
               <button
                 type="button"
                 onClick={() => setIsDemoOpen(true)}
-                className="inline-flex items-center justify-center px-8 py-4 bg-white border-2 border-gray-200 text-gray-800 rounded-xl font-bold hover:border-primary-600 hover:text-primary-600 hover:shadow-xl transition-all duration-300 group"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:border-primary-500 hover:text-primary-600 hover:shadow-md transition-all duration-200 group"
               >
-                <Play size={20} className="mr-2 group-hover:scale-110 transition-transform" />
+                <Play size={20} className="mr-2 transition-transform" />
                 Watch Demo
               </button>
             </div>
@@ -290,17 +289,17 @@ export function Hero() {
               <div className="hidden sm:block w-px h-16 bg-gray-300"></div>
               <div className="text-center group cursor-pointer">
                 <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold gradient-text group-hover:scale-110 transition-transform inline-block"><CountUp to={10} />+</div>
-                <div className="text-sm sm:text-base md:text-lg text-gray-700 font-semibold mt-2">Projects Completed</div>
+                <div className="text-sm sm:text-base md:text-lg text-gray-800 font-bold mt-2">Projects Completed</div>
               </div>
               <div className="hidden sm:block w-px h-16 bg-gray-300"></div>
               <div className="text-center group cursor-pointer">
                 <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold gradient-text group-hover:scale-110 transition-transform inline-block">10+</div>
-                <div className="text-sm sm:text-base md:text-lg text-gray-700 font-semibold mt-2">Happy Clients</div>
+                <div className="text-sm sm:text-base md:text-lg text-gray-800 font-bold mt-2">Happy Clients</div>
               </div>
               <div className="hidden sm:block w-px h-16 bg-gray-300"></div>
               <div className="text-center group cursor-pointer">
                 <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold gradient-text group-hover:scale-110 transition-transform inline-block">1+</div>
-                <div className="text-sm sm:text-base md:text-lg text-gray-700 font-semibold mt-2">Years Experience</div>
+                <div className="text-sm sm:text-base md:text-lg text-gray-800 font-bold mt-2">Years Experience</div>
               </div>
             </div>
           </div>
@@ -321,18 +320,16 @@ export function Hero() {
             </div>
 
             {/* Floating Elements */}
-            <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full opacity-30 animate-float blur-2xl"></div>
-            <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-gradient-to-br from-green-400 to-cyan-500 rounded-full opacity-30 animate-float blur-2xl" style={{animationDelay: '1s'}}></div>
-            <div className="absolute top-1/2 -left-10 w-24 h-24 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full opacity-30 animate-float blur-2xl" style={{animationDelay: '0.5s'}}></div>
+            <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-cyan-300 to-cyan-400 rounded-full opacity-20 blur-2xl"></div>
+            <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-gradient-to-br from-blue-300 to-cyan-400 rounded-full opacity-20 blur-2xl"></div>
           </div>
         </div>
       </div>
 
       {/* Background Pattern */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-blue-300 to-purple-400 rounded-full opacity-30 blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-purple-300 to-pink-400 rounded-full opacity-30 blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-gradient-to-br from-yellow-200 to-orange-300 rounded-full opacity-20 blur-3xl animate-pulse" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-cyan-200 to-cyan-300 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-blue-200 to-cyan-300 rounded-full opacity-20 blur-3xl"></div>
       </div>
 
       {/* Demo Modal */}

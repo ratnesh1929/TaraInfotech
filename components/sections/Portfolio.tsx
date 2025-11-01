@@ -35,11 +35,11 @@ export function Portfolio() {
   ]
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
+    <section className="py-24 bg-gray-50 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-blue-300 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-300 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-20 w-96 h-96 bg-blue-200 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-slate-200 rounded-full blur-3xl"></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -59,21 +59,19 @@ export function Portfolio() {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 group border border-gray-100 hover:border-primary-200"
+              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-200 group border border-gray-200"
               style={{animationDelay: `${index * 0.1}s`}}
             >
               <div className="relative overflow-hidden h-64">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover transition-transform duration-300"
                 />
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
+                <h3 className="text-lg font-bold text-gray-900 mb-3 transition-colors">
                   {project.title}
                 </h3>
                 
