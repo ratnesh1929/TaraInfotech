@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
     // Email to company
     const mailOptionsToCompany = {
       from: process.env.EMAIL_USER,
-      to: 'tarasoftwareworks@gmail.com',
+      to: 'mundratechworks@gmail.com',
       subject: `New Contact Form Submission: ${subject}`,
       html: `
         <!DOCTYPE html>
@@ -187,7 +187,7 @@ export async function POST(request: NextRequest) {
               
               <p>If you have any urgent queries, feel free to reach us directly at:</p>
               <ul>
-                <li>📧 Email: tarasoftwareworks@gmail.com</li>
+                <li>📧 Email: mundratechworks@gmail.com</li>
                 <li>📱 Phone: +91 8866661624</li>
                 <li>📍 Address: Central Bazar, Navsari, Gujarat, India</li>
               </ul>

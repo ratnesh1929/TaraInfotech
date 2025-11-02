@@ -161,8 +161,8 @@ export default function CookiePolicy() {
               If you have questions about our use of cookies, please contact us:
             </p>
             <div className="space-y-2 text-gray-700">
-              <p><strong>Email:</strong> privacy@tarainfotech.com</p>
-              <p><strong>Phone:</strong> +91 (XXX) XXX-XXXX</p>
+              <p><strong>Email:</strong> mundratechworks@gmail.com</p>
+              <p><strong>Phone:</strong> +91 8866661624</p>
             </div>
           </section>
         </div>

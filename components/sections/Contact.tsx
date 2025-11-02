@@ -251,7 +251,7 @@ export function Contact() {
                   {
                     title: "Email",
                     icon: Mail,
-                    details: ["tarasoftwareworks@gmail.com"],
+                    details: ["mundratechworks@gmail.com"],
                   },
                   {
                     title: "Phone",
@@ -305,7 +305,7 @@ export function Contact() {
                 <p className="flex items-start">
                   <span className="text-primary-600 mr-2 mt-0.5">•</span>
                   <span>For career opportunities, please email your resume to{" "}
-                  <span className="font-semibold text-primary-600">hr@tarainfotech.com</span>.</span>
+                  <span className="font-semibold text-primary-600">hr@mundratech.com</span>.</span>
                 </p>
               </div>
             </div>

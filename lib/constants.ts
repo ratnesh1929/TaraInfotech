@@ -72,7 +72,7 @@ export const SERVICES = [
 ]
 
 export const CONTACT_INFO = {
-  email: 'tarasoftwareworks@gmail.com',
+  email: 'mundratechworks@gmail.com',
   phone: '+91 8866661624',
   address: '123 Tech Street, Innovation District, City, State 12345',
   businessHours: {

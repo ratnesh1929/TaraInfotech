@@ -16,12 +16,12 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-start">
-              <div className="relative w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
+              <div className="relative w-44 h-20 sm:w-52 sm:h-24 flex items-center justify-center">
                 <Image
-                  src="/mundralogo.jpg"
-                  alt="MundraTech Logo"
-                  width={96}
-                  height={96}
+                  src="/mundratech-logo.svg"
+                  alt="MUNDRATECH Logo"
+                  width={200}
+                  height={67}
                   className="object-contain drop-shadow-xl"
                 />
               </div>
@@ -115,7 +115,7 @@ export function Footer() {
                 <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary-600 transition-colors flex-shrink-0">
                   <Mail size={16} className="text-primary-400 group-hover:text-white transition-colors" />
                 </div>
-                <span className="text-gray-300 text-sm leading-relaxed break-all">tarasoftwareworks@gmail.com</span>
+                <span className="text-gray-300 text-sm leading-relaxed break-all">mundratechworks@gmail.com</span>
               </div>
               <div className="flex items-start space-x-3 group">
                 <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-primary-600 transition-colors flex-shrink-0">

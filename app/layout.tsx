@@ -7,15 +7,15 @@ import { Footer } from '@/components/layout/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'MundraTech - Your Technology Partner',
+  title: 'MUNDRATECH - Your Technology Partner',
   description: 'Leading technology solutions provider specializing in web development, mobile apps, and digital transformation.',
   keywords: 'technology, web development, mobile apps, digital solutions, software development',
   icons: {
-    icon: '/mundralogo.jpg',
-    apple: '/mundralogo.jpg',
+    icon: '/mundratech-logo.svg',
+    apple: '/mundratech-logo.svg',
   },
   openGraph: {
-    images: ['/mundralogo.jpg'],
+    images: ['/mundratech-logo.svg'],
   },
 }
 

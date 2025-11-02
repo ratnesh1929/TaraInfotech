@@ -31,13 +31,13 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 group">
-              <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+              <div className="relative w-44 h-16 sm:w-52 sm:h-20 flex items-center justify-center">
                 <Image
-                  src="/mundralogo.jpg"
-                  alt="MundraTech Logo"
-                  width={80}
-                  height={80}
-                  className="object-contain group-hover:scale-110 transition-all duration-300 drop-shadow-lg"
+                  src="/mundratech-logo.svg"
+                  alt="MUNDRATECH Logo"
+                  width={200}
+                  height={67}
+                  className="object-contain group-hover:scale-105 transition-all duration-300 drop-shadow-lg"
                   priority
                 />
               </div>

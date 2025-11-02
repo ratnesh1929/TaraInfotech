@@ -264,9 +264,9 @@ export default function TermsOfService() {
               If you have any questions about these Terms of Service, please contact us:
             </p>
             <div className="space-y-2 text-gray-700">
-              <p><strong>Email:</strong> legal@tarainfotech.com</p>
-              <p><strong>Phone:</strong> +91 (XXX) XXX-XXXX</p>
-              <p><strong>Address:</strong> Your Company Address</p>
+              <p><strong>Email:</strong>mundratechworks@gmail.com</p>
+              <p><strong>Phone:</strong> +91 8866661624</p>
+              <p><strong>Address:</strong> Central Bazaar,Navsari</p>
             </div>
           </section>
         </div>

@@ -1,0 +1,45 @@
+<svg width="240" height="80" viewBox="0 0 240 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient circle -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1E40AF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon/Symbol -->
+  <g transform="translate(5, 10)">
+    <!-- Outer hexagon -->
+    <path d="M30 5 L50 15 L50 35 L30 45 L10 35 L10 15 Z" fill="url(#grad1)" opacity="0.9"/>
+    
+    <!-- Inner tech symbol -->
+    <path d="M30 15 L40 20 L40 30 L30 35 L20 30 L20 20 Z" fill="white" opacity="0.95"/>
+    
+    <!-- Circuit lines -->
+    <line x1="30" y1="15" x2="30" y2="10" stroke="white" stroke-width="2" opacity="0.8"/>
+    <line x1="40" y1="20" x2="45" y2="17" stroke="white" stroke-width="2" opacity="0.8"/>
+    <line x1="40" y1="30" x2="45" y2="33" stroke="white" stroke-width="2" opacity="0.8"/>
+    <line x1="20" y1="20" x2="15" y2="17" stroke="white" stroke-width="2" opacity="0.8"/>
+    <line x1="20" y1="30" x2="15" y2="33" stroke="white" stroke-width="2" opacity="0.8"/>
+    
+    <!-- Center dot -->
+    <circle cx="30" cy="25" r="3" fill="url(#grad2)"/>
+  </g>
+  
+  <!-- Text: MUNDRATECH -->
+  <text x="70" y="35" font-family="Arial, sans-serif" font-size="22" font-weight="800" fill="#1E293B" letter-spacing="0.5">
+    MUNDRA
+  </text>
+  <text x="70" y="55" font-family="Arial, sans-serif" font-size="22" font-weight="800" fill="url(#grad2)" letter-spacing="0.5">
+    TECH
+  </text>
+  
+  <!-- Tagline -->
+  <text x="70" y="68" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#64748B" letter-spacing="1.5">
+    INNOVATION SIMPLIFIED
+  </text>
+</svg>
